@@ -54,5 +54,13 @@
   }
   .navbar-brand {
     float: left;
+    height: 0;
+    padding: 0;
+  }
+  .navbar-brand>img {
+    margin-top: 0;
+  }
+  #navbar-links {
+    margin-top: 110px;
   }
 }
