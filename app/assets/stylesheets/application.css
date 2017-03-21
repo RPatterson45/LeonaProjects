@@ -57,10 +57,47 @@
     height: 0;
     padding: 0;
   }
-  .navbar-brand>img {
-    margin-top: 0;
+  .navbar-brand img {
+    margin-top: -20px;
   }
   #navbar-links {
-    margin-top: 110px;
+    margin-top: 120px;
+  }
+  #navbar-links a:hover {
+    background-color: #6600cc;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+  }
+  #navbar-links .active a {
+    background-color: #6600cc;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+  }
+  #search-bar input {
+    float: left;
+    width: 100%;
+  }
+  #menu-btn {
+    background-color: #6600cc;
+    border: 1px solid black;
+    border-radius: 100px;
+  }
+  #menu-btn span {
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  #search-bar input {
+    float: left;
+    width: 150px;
+    margin-right: 5px;
+  }
+  #search-bar {
+    margin-bottom: 0;
   }
 }

@@ -26,7 +26,6 @@
   a:hover {
     background-color: #6600cc;
     color: white;
-    border: 1px solud black;
     border: 1px solid black;
     border-radius: 5px;
   }
@@ -38,9 +37,36 @@
   }
 }
 
-.navbar-brand>img {
-  margin-top: 2px;
+.navbar-brand img {
   display: inline-block;
+  margin-top: -30px;
+}
+
+#search-btn {
+  font-family: 'Nova Mono', monospace;
+  background-color: #6600cc;
+  color: white;
+  border: 1px solid black;
+}
+
+.form-control {
+  border: 1px solid black;
+}
+
+.form-control::-webkit-input-placeholder { 
+  font-family: 'Nova Mono', monospace;
+  color: #6600cc;
+}
+.form-control::-moz-placeholder { 
+  font-family: 'Nova Mono', monospace;
+  color: #6600cc;
+}
+.form-control:-ms-input-placeholder { 
+  color: #6600cc;
+}
+.form-control:-moz-placeholder { 
+  font-family: 'Nova Mono', monospace;
+  color: #6600cc;
 }
 
 /* Header */
