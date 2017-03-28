@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+#collage {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
 
 @media (max-width: 1200px) {
   .navbar-header {
