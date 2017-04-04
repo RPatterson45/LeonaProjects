@@ -59,12 +59,12 @@
   .navbar-form {
     padding-left: 10px;
   }
-  .navbar-brand {
+  #brand {
     float: left;
     height: 0;
     padding: 0;
   }
-  .navbar-brand img {
+  #brand img {
     margin-top: -20px;
   }
   #navbar-links {

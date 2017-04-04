@@ -14,8 +14,12 @@
     height: 0;
     padding: 0;
 }
-.navbar-brand {
+#brand {
   float:none;
+}
+
+#brand:hover {
+  background-color: #009973;
 }
 
 #navbar-links {
@@ -37,7 +41,7 @@
   }
 }
 
-.navbar-brand img {
+#brand img {
   display: inline-block;
   margin-top: -30px;
 }
