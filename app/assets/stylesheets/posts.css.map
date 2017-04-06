@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,WAAY,CACV,UAAU,CAAE,MAAM,CAGpB,YAAa,CACX,WAAW,CAAE,CAAC,CAGhB,WAAY,CACV,OAAO,CAAE,KAAK,CACd,MAAM,CAAE,MAAM,CACd,SAAS,CAAE,IAAI",
+"sources": ["posts.scss"],
+"names": [],
+"file": "posts.css"
+}

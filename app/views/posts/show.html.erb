@@ -17,7 +17,7 @@
 
 <p>
   <strong>Image url:</strong>
-  <%= @post.image_url %>
+  <%= image_tag (@post.image_url), id: "post-image", class: "img-responsive" %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
