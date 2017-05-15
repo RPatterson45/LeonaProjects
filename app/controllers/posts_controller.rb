@@ -4,7 +4,18 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params[:q]
+      search_term = params[:q]
+      if(Rails.env.development?)
+        logger.debug "A search was performed in development using case insensitivity."
+        @posts = Post.where("name LIKE", "%#{search_term}%")
+      else
+        logger.debug "A search was performed in production using case insensitivity."
+        @posts = Post.where("name ilike ?", "%#{search_term}%")
+      end
+    else
+      @posts = Post.all
+    end
   end
 
   # GET /posts/1
@@ -28,7 +39,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to "posts/index", notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }

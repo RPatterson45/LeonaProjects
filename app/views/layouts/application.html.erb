@@ -47,16 +47,21 @@
             <li class="active"><%= link_to "Home", root_path %><span class="sr-only">(current)</span></li>
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Archive", static_pages_archive_path %></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group" id="search-bar">
-              <input type="text" class="form-control" placeholder="Find Article">
-            </div>
-            <button type="submit" class="btn btn-default" id="search-btn">Search</button>
-          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_session_path) %>
+              <% end %>
+            </li>
+          </ul>
+          <%= form_tag "/posts", method: "get", class: "navbar-form navbar-right" do %>
+            <%= text_field_tag :q, "", class:"form-control", placeholder: "Find Article" %>
+            <%= submit_tag "Search", class: "btn btn-default", id: "search-btn" %>
+          <% end %>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
