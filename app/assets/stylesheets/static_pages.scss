@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /* Navbar */
+body {
+  margin-top: 0;
+}
+
 .navbar {
   margin-bottom: 70px;
   background-color: #009973;
@@ -82,6 +86,14 @@
 #mission {
   text-align: center;
   font-family: 'Sigmar One', cursive;
+}
+
+.alert {
+  margin: 0;
+}
+
+.notice {
+  margin: 0;
 }
 
 
