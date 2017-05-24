@@ -6,8 +6,13 @@
     
     <title>Leona Projects</title>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
+    <%end %>
+
+    <% if alert %>
+      <p class="alert alert-warning" role="alert"><%= alert %></p>
+    <% end %>
 
     <link href="https://fonts.googleapis.com/css?family=Sigmar+One|Nova+Mono" rel="stylesheet">
     
