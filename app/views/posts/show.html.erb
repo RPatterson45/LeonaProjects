@@ -9,8 +9,8 @@
 </p>
 
 <p>
-  <strong>Posted:</strong>
-  <%= @post.posted %>
+  <strong>Posted at</strong>
+  <%= @post.posted.strftime("%I:%M%p on %B %e, %Y") %>
 </p>
 
 <p>
@@ -23,3 +23,5 @@
 
 <%= render 'new_comment' %>
 <%= render 'comments' %>
+
+<%= will_paginate @comments, class: "paginate" %>

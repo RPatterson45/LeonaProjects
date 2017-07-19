@@ -4,6 +4,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @posts = Post.paginate(page: params[:page], :per_page => 5)
+
     if params[:q]
       search_term = params[:q]
       if(Rails.env.development?)
@@ -14,14 +16,14 @@ class PostsController < ApplicationController
         @posts = Post.where("name ilike ?", "%#{search_term}%")
       end
     else
-      @posts = Post.all
+      
     end
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @comments = @post.comments.order("created_at DESC")
+    @comments = @post.comments.order("created_at DESC").paginate(page: params[:page], per_page: 5)
   end
 
   # GET /posts/new
@@ -40,7 +42,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to "posts/index", notice: 'Post was successfully created.' }
+        format.html { redirect_to "/", notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
