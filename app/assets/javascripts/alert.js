@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function(){
-  $(".alert").delay(1000).fadeOut(500);
-  $("#notice").delay(1000).fadeOut(500);
+  $(".alert").delay(2000).fadeOut(1000);
+  $("#notice").delay(2000).fadeOut(1000);
 });
 
