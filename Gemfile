@@ -44,6 +44,15 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+# For rspec
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  # Factory Girl
+  gem 'factory_girl_rails', '~> 4.0'
+  # Database Cleaner
+  gem 'database_cleaner'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
