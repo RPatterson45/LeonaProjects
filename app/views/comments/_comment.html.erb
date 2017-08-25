@@ -1,0 +1,10 @@
+<div class="row">
+      <hr>
+      <p>
+        <%= comment.user_first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+        <% if current_user && current_user.admin? %>
+          <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, post_comment_path(comment.post, comment), method: :delete, data: { confirm: 'Delete this comment?' }, class: "comment-destroy" %>
+        <% end %>
+      </p>
+      <p><%= comment.body %></p>
+    </div>

@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <h4>Please tell us what you think:</h4>
-  <%= form_for([@post, @post.comments.build]) do |f| %>
+  <%= form_for([@post, @post.comments.build], remote: true) do |f| %>
     <p>
       <%= f.label :body, "Comments" %><br>
       <%= f.text_area :body, required: true %>
